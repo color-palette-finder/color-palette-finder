@@ -10,11 +10,11 @@ var colorObject = {};
 function colorHelper ( property ) {
 	for(var i = 0; i < elements.length; i++) {
 
-		var style = window.getComputedStyle(elements[i]); 
-		var color = style.getPropertyValue( property ); 
+		var style = window.getComputedStyle(elements[i]);
+		var color = style.getPropertyValue( property );
 
 		console.log( property );
-		
+
 		if(color !== 'rgb(0, 0, 0)' && color !== 'rgb(255, 255, 255)' && color !== 'rgba(0, 0, 0, 0)') {
 			if(!colorObject[color]){
 				colorObject[color]=1;
@@ -52,5 +52,30 @@ for (var i = 0; i < 6; i++) {
 for (var keys in colorObject) {
 	console.log('for in result: ', colorObject[keys]);
 }
+
+for (var i = 0; i < paletteArray.length; i++) {
+  var extnDiv = document.getElementById('paletteDisplay');
+  var paletteDiv = document.createElement('div');
+  var displayDiv = document.createElement('div');
+  var valueDiv = document.createElement('div');
+  var rgbValue = document.createElement('p');
+  var hexValue = document.createElement('p');
+
+  rgbValue.innerHTML = "VALUE FROM FUNCTION";
+  hexValue.innerHTML = "VALUE FROM FUNCTION";
+
+  paletteDiv.setAttribute("class", "paletteDiv");
+  displayDiv.setAttribute("class","displayDiv");
+  valueDiv.setAttribute("class","valueDiv");
+
+  paletteDiv.style.backgroundColor = i;
+
+  valueDiv.appendChild(rgbValue);
+  valueDiv.appendChild(hexValue);
+  paletteDiv.appendChild(displayDiv);
+  paletteDiv.appendChild(valueDiv);
+  extnDiv.appendChild(paletteDiv);
+}
+
 console.log('after:', colorObject);
 console.log(paletteArray);
