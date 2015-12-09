@@ -38,6 +38,7 @@ function getObjectMax () {
 for (var i = 0; i < 6; i++) {
 	getObjectMax();
 }
+
 console.log(paletteArray);
 //-------------------------------------------------------------------------------------------
 
@@ -65,6 +66,31 @@ for(var j = 0; j < paletteArray.length; j++) {
 console.log(hexArray);
 //-------------------------------------------------------------------------------------------
 
+
+//------------------------------ ADD INFO TO HTML FILE, ADD COLORS TO DOM ELEMENTS ---------------------------------
+// for (var i = 0; i < paletteArray.length; i++) {
+//   var extnDiv = document.getElementById('paletteDisplay');
+//   var paletteDiv = document.createElement('div');
+//   var displayDiv = document.createElement('div');
+//   var valueDiv = document.createElement('div');
+//   var rgbValue = document.createElement('p');
+//   var hexValue = document.createElement('p');
+
+//   rgbValue.innerHTML = "VALUE FROM FUNCTION";
+//   hexValue.innerHTML = "VALUE FROM FUNCTION";
+
+//   paletteDiv.setAttribute("class", "paletteDiv");
+//   displayDiv.setAttribute("class","displayDiv");
+//   valueDiv.setAttribute("class","valueDiv");
+
+//   paletteDiv.style.backgroundColor = i;
+
+//   valueDiv.appendChild(rgbValue);
+//   valueDiv.appendChild(hexValue);
+//   paletteDiv.appendChild(displayDiv);
+//   paletteDiv.appendChild(valueDiv);
+//   extnDiv.appendChild(paletteDiv);
+// }
 
 
 
