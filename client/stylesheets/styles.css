@@ -1,0 +1,224 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /*vertical-align:baseline;*/
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:2px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin: 0;
+    padding:0 0 10px 0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+#app {
+  margin: 0 auto;
+  display: block;
+}
+
+#container {
+  margin: 0 auto;
+  display: inline-flex;
+
+}
+
+.palette-box {
+  position: relative;
+  width: 70px;
+  height: 300px;
+}
+
+.color1 {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #22A7F0;
+  padding: 10px;
+
+}
+
+.color2 {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #03C9A9;
+  padding: 10px;
+
+}
+
+.color3 {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #F7CA18;
+  padding: 10px;
+
+}
+
+.color4 {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #D91E18;
+  padding: 10px;
+
+}
+
+.color5 {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #8E44AD;
+  padding: 10px;
+
+}
+
+.color6 {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #DB0A5B;
+  padding: 10px;
+
+}
+
+.text1 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+
+}
+
+.text2 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+
+}
+.text3 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+
+}
+.text4 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+
+}
+
+.text5 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+
+}
+
+.text6 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+
+}
