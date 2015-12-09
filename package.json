@@ -1,0 +1,19 @@
+{
+  "name": "color-palette-finder",
+  "version": "1.0.0",
+  "description": "Front-end developer Googe Chrome Extension for webscraping HTML pages for creating color palettes",
+  "main": "palette-finder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieldealday/color-palette-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieldealday/color-palette-finder/issues"
+  },
+  "homepage": "https://github.com/danieldealday/color-palette-finder#readme"
+}
