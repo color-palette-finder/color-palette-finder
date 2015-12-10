@@ -7,8 +7,14 @@ function setDOMInfo(info) {
   document.getElementById('text5').innerHTML = info.paletteArray[4] + '<br>' + info.hexArray[4];
   document.getElementById('text6').innerHTML = info.paletteArray[5] + '<br>' + info.hexArray[5];
 
-  console.log('paletteArray:', info.paletteArray)
-  console.log('hexArray:', info.hexArray)
+  document.getElementById('color1').style.backgroundColor = info.hexArray[0];
+  document.getElementById('color2').style.backgroundColor = info.hexArray[1];
+  document.getElementById('color3').style.backgroundColor = info.hexArray[2];
+  document.getElementById('color4').style.backgroundColor = info.hexArray[3];
+  document.getElementById('color5').style.backgroundColor = info.hexArray[4];
+  document.getElementById('color6').style.backgroundColor = info.hexArray[5];
+  console.log('paletteArray:', info.paletteArray);
+  console.log('hexArray:', info.hexArray);
 }
 
 // Once the DOM is ready...
@@ -22,7 +28,7 @@ window.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.sendMessage(
         tabs[0].id,
         {from: 'popup', subject: 'DOMInfo'},
-        // ...also specifying a callback to be called 
+        // ...also specifying a callback to be called
         //    from the receiving end (content script)
         setDOMInfo);
   });
