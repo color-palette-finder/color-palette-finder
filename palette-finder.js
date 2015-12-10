@@ -17,6 +17,7 @@ function colorHelper ( property ) {
 		}
 	}
 }
+
 colorHelper('color');
 colorHelper('background-color');
 console.log('before:', colorObject);
@@ -39,9 +40,9 @@ for (var i = 0; i < 6; i++) {
 	getObjectMax();
 }
 
-console.log(paletteArray);
-//-------------------------------------------------------------------------------------------
+console.log('paletteArray:', paletteArray);
 
+//-------------------------------------------------------------------------------------------
 
 
 
@@ -63,38 +64,36 @@ for(var j = 0; j < paletteArray.length; j++) {
 		rgbToHex(parseInt(rgb[1]), parseInt(rgb[2]), parseInt(rgb[3]));
 }
 
-console.log(hexArray);
+localStorage.setItem('paletteArray:', paletteArray);
+localStorage.setItem('hexArray', hexArray);
+
+console.log('hexArray:', hexArray);
 //-------------------------------------------------------------------------------------------
 
 
-//------------------------------ ADD INFO TO HTML FILE, ADD COLORS TO DOM ELEMENTS ---------------------------------
-// for (var i = 0; i < paletteArray.length; i++) {
-//   var extnDiv = document.getElementById('paletteDisplay');
-//   var paletteDiv = document.createElement('div');
-//   var displayDiv = document.createElement('div');
-//   var valueDiv = document.createElement('div');
-//   var rgbValue = document.createElement('p');
-//   var hexValue = document.createElement('p');
-
-//   rgbValue.innerHTML = "VALUE FROM FUNCTION";
-//   hexValue.innerHTML = "VALUE FROM FUNCTION";
-
-//   paletteDiv.setAttribute("class", "paletteDiv");
-//   displayDiv.setAttribute("class","displayDiv");
-//   valueDiv.setAttribute("class","valueDiv");
-
-//   paletteDiv.style.backgroundColor = i;
-
-//   valueDiv.appendChild(rgbValue);
-//   valueDiv.appendChild(hexValue);
-//   paletteDiv.appendChild(displayDiv);
-//   paletteDiv.appendChild(valueDiv);
-//   extnDiv.appendChild(paletteDiv);
-// }
+console.log('paletteArray:', paletteArray);
 
 
+chrome.runtime.sendMessage({
+  from:    'content',
+  subject: 'showPageAction'
+});
 
+// Listen for messages from the popup
+chrome.runtime.onMessage.addListener(function (msg, sender, response) {
+  // First, validate the message's structure
+  if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+    // Collect the necessary data 
+    var domInfo = {
+      paletteArray:   paletteArray,
+      hexArray:  hexArray
+    };
 
+    // Directly respond to the sender (popup), 
+    // through the specified callback 
+    response(domInfo);
+  }
+});
 
 
 
