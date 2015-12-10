@@ -34,15 +34,13 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// function displayColors () {
-//   document.getElementById('text1').innerHTML = paletteArray[0] + '<br><br>' + hexArray[0];
-//   document.getElementById('text2').innerHTML = paletteArray[1] + '<br><br>' + hexArray[1];
-//   document.getElementById('text3').innerHTML = paletteArray[2] + '<br><br>' + hexArray[2];
-//   document.getElementById('text4').innerHTML = paletteArray[3] + '<br><br>' + hexArray[3];
-//   document.getElementById('text5').innerHTML = paletteArray[4] + '<br><br>' + hexArray[4];
-//   document.getElementById('text6').innerHTML = paletteArray[5] + '<br><br>' + hexArray[5];
-
-//   console.log(paletteArray, hexArray)
-// }
-
-// document.getElementById('colorButton').addEventListener('click', displayColors);
+var boxes = document.querySelectorAll('.colorBox');
+console.log(boxes);
+for (var i = 0; i < boxes.length; i++){
+  boxes[i].addEventListener('click', function (event){
+    event.preventDefault();
+  	var hexStyle = window.getComputedStyle( this );
+  	var hexCopy = hexStyle.getPropertyValue('background-color');
+  	console.log( hexCopy );
+  })
+}
