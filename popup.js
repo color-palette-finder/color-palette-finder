@@ -1,11 +1,11 @@
 
 function setDOMInfo(info) {
-  document.getElementById('text1').innerHTML = info.paletteArray[0] + '<br>' + info.hexArray[0];
-  document.getElementById('text2').innerHTML = info.paletteArray[1] + '<br>' + info.hexArray[1];
-  document.getElementById('text3').innerHTML = info.paletteArray[2] + '<br>' + info.hexArray[2];
-  document.getElementById('text4').innerHTML = info.paletteArray[3] + '<br>' + info.hexArray[3];
-  document.getElementById('text5').innerHTML = info.paletteArray[4] + '<br>' + info.hexArray[4];
-  document.getElementById('text6').innerHTML = info.paletteArray[5] + '<br>' + info.hexArray[5];
+  document.getElementById('text1').innerHTML = '<div class="hexText">' + info.hexArray[0] + '</div><br><div class="rgbText">' +  info.paletteArray[0] + '</div>';
+  document.getElementById('text2').innerHTML = '<div class="hexText">' + info.hexArray[1] + '</div><br><div class="rgbText">' +  info.paletteArray[1] + '</div>';
+  document.getElementById('text3').innerHTML = '<div class="hexText">' + info.hexArray[2] + '</div><br><div class="rgbText">' +  info.paletteArray[2] + '</div>';
+  document.getElementById('text4').innerHTML = '<div class="hexText">' + info.hexArray[3] + '</div><br><div class="rgbText">' +  info.paletteArray[3] + '</div>';
+  document.getElementById('text5').innerHTML = '<div class="hexText">' + info.hexArray[4] + '</div><br><div class="rgbText">' +  info.paletteArray[4] + '</div>';
+  document.getElementById('text6').innerHTML = '<div class="hexText">' + info.hexArray[5] + '</div><br><div class="rgbText">' +  info.paletteArray[5] + '</div>';
 
   document.getElementById('color1').style.backgroundColor = info.hexArray[0];
   document.getElementById('color2').style.backgroundColor = info.hexArray[1];
