@@ -1,9 +1,9 @@
 var elements = document.getElementsByTagName('*');
 console.log('elements: ', elements);
+
+// ------------------- SCRAPE PAGE FOR ALL COLORS AND BACKGROUND COLORS ------------------------
+
 var colorObject = {};
-
-
-// ------------------- SCRAPE PAGE FOR ALL COLORS AND BACKGROUNDCOLORS ------------------------
 function colorHelper ( property ) {
 	for(var i = 0; i < elements.length; i++) {
 		var style = window.getComputedStyle(elements[i]); 
@@ -18,9 +18,10 @@ function colorHelper ( property ) {
 	}
 }
 
+// get property values for elements with color and background color
 colorHelper('color');
 colorHelper('background-color');
-console.log('before:', colorObject);
+console.log('Color count:', colorObject);
 
 //FIND TOP 6 MOST COMMON COLORS ON PAGE
 var paletteArray = [];
@@ -64,12 +65,12 @@ for(var j = 0; j < paletteArray.length; j++) {
 		rgbToHex(parseInt(rgb[1]), parseInt(rgb[2]), parseInt(rgb[3]));
 }
 
-localStorage.setItem('paletteArray:', paletteArray);
-localStorage.setItem('hexArray', hexArray);
-
 console.log('hexArray:', hexArray);
 //-------------------------------------------------------------------------------------------
 
+
+
+//--------------------------- pass values to chrome pop up html window -----------------------------
 
 console.log('paletteArray:', paletteArray);
 
