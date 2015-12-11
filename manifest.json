@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Color Palette Finder",
-	"description": "Find the most common colors used on any site! Creates a palette of HEX and RGBA values.",
+	"description": "Find the most commonly used colors on any site! Creates a palette of HEX and RGBA values.",
 	"version": "0.0.2",
 	"background": {
 		"scripts": ["background.js"],

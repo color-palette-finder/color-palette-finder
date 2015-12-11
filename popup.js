@@ -17,6 +17,7 @@ function setDOMInfo(info) {
   console.log('hexArray:', info.hexArray);
 }
 
+
 // Once the DOM is ready...
 window.addEventListener('DOMContentLoaded', function () {
   // ...query for the active tab...
@@ -28,21 +29,35 @@ window.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.sendMessage(
         tabs[0].id,
         {from: 'popup', subject: 'DOMInfo'},
-        // ...also specifying a callback to be called
-        //    from the receiving end (content script)
         setDOMInfo);
   });
 });
 
-// function displayColors () {
-//   document.getElementById('text1').innerHTML = paletteArray[0] + '<br><br>' + hexArray[0];
-//   document.getElementById('text2').innerHTML = paletteArray[1] + '<br><br>' + hexArray[1];
-//   document.getElementById('text3').innerHTML = paletteArray[2] + '<br><br>' + hexArray[2];
-//   document.getElementById('text4').innerHTML = paletteArray[3] + '<br><br>' + hexArray[3];
-//   document.getElementById('text5').innerHTML = paletteArray[4] + '<br><br>' + hexArray[4];
-//   document.getElementById('text6').innerHTML = paletteArray[5] + '<br><br>' + hexArray[5];
 
-//   console.log(paletteArray, hexArray)
-// }
 
-// document.getElementById('colorButton').addEventListener('click', displayColors);
+var client = new ZeroClipboard(document.getElementsByClassName('colorBox'))
+console.log(client);
+// copy to clipboard, not done yet
+var boxes = document.querySelectorAll('.colorBox');
+console.log(boxes);
+
+for (var i = 0; i < boxes.length; i++){
+
+  boxes[i].addEventListener('click', function (){
+
+    var hexStyle = document.getElementById(this.id);
+    var hexCopy = hexStyle.nextElementSibling.childNodes[0].innerText;
+    console.log(hexCopy);
+    
+    // client.on('copy', function (event) {
+    //   console.log('in copy');
+    //   var clipboard = event.clipboardData;
+    //   clipboard.setData('text/plain', hexStyle.nextElementSibling.childNodes[0].innerText);
+    // })
+
+
+
+
+  })
+}
+
