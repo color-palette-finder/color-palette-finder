@@ -17,6 +17,7 @@ function setDOMInfo(info) {
   console.log('hexArray:', info.hexArray);
 }
 
+
 // Once the DOM is ready...
 window.addEventListener('DOMContentLoaded', function () {
   // ...query for the active tab...

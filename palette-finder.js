@@ -89,7 +89,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
       paletteArray:   paletteArray,
       hexArray:  hexArray
     };
-
     // Directly respond to the sender (popup), 
     // through the specified callback 
     response(domInfo);
