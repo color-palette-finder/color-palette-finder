@@ -1,11 +1,11 @@
 
 function setDOMInfo(info) {
-  document.getElementById('text1').innerHTML = '<div class="hexText">' + info.hexArray[0] + '</div><br><div class="rgbText">' +  info.paletteArray[0] + '</div>';
-  document.getElementById('text2').innerHTML = '<div class="hexText">' + info.hexArray[1] + '</div><br><div class="rgbText">' +  info.paletteArray[1] + '</div>';
-  document.getElementById('text3').innerHTML = '<div class="hexText">' + info.hexArray[2] + '</div><br><div class="rgbText">' +  info.paletteArray[2] + '</div>';
-  document.getElementById('text4').innerHTML = '<div class="hexText">' + info.hexArray[3] + '</div><br><div class="rgbText">' +  info.paletteArray[3] + '</div>';
-  document.getElementById('text5').innerHTML = '<div class="hexText">' + info.hexArray[4] + '</div><br><div class="rgbText">' +  info.paletteArray[4] + '</div>';
-  document.getElementById('text6').innerHTML = '<div class="hexText">' + info.hexArray[5] + '</div><br><div class="rgbText">' +  info.paletteArray[5] + '</div>';
+  document.getElementById('text1').innerHTML = '<div id="hex1" class="hexText">' + info.hexArray[0] + '</div><br><div class="rgbText">' +  info.paletteArray[0] + '</div>';
+  document.getElementById('text2').innerHTML = '<div id="hex2" class="hexText">' + info.hexArray[1] + '</div><br><div class="rgbText">' +  info.paletteArray[1] + '</div>';
+  document.getElementById('text3').innerHTML = '<div id="hex3" class="hexText">' + info.hexArray[2] + '</div><br><div class="rgbText">' +  info.paletteArray[2] + '</div>';
+  document.getElementById('text4').innerHTML = '<div id="hex4" class="hexText">' + info.hexArray[3] + '</div><br><div class="rgbText">' +  info.paletteArray[3] + '</div>';
+  document.getElementById('text5').innerHTML = '<div id="hex5" class="hexText">' + info.hexArray[4] + '</div><br><div class="rgbText">' +  info.paletteArray[4] + '</div>';
+  document.getElementById('text6').innerHTML = '<div id="hex6" class="hexText">' + info.hexArray[5] + '</div><br><div class="rgbText">' +  info.paletteArray[5] + '</div>';
 
   document.getElementById('color1').style.backgroundColor = info.hexArray[0];
   document.getElementById('color2').style.backgroundColor = info.hexArray[1];
@@ -34,30 +34,26 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-var client = new ZeroClipboard(document.getElementsByClassName('colorBox'))
-console.log(client);
-// copy to clipboard, not done yet
-var boxes = document.querySelectorAll('.colorBox');
+new Clipboard('.colorBox');
+// copy to clipboard
 console.log(boxes);
 
-for (var i = 0; i < boxes.length; i++){
+// for (var i = 0; i < boxes.length; i++){
 
-  boxes[i].addEventListener('click', function (){
+//   boxes[i].addEventListener('click', function (){
 
-    var hexStyle = document.getElementById(this.id);
-    var hexCopy = hexStyle.nextElementSibling.childNodes[0].innerText;
-    console.log(hexCopy);
-    
-    // client.on('copy', function (event) {
-    //   console.log('in copy');
-    //   var clipboard = event.clipboardData;
-    //   clipboard.setData('text/plain', hexStyle.nextElementSibling.childNodes[0].innerText);
-    // })
+//     var hexStyle = document.getElementById(this.id);
+//     var hexCopy = hexStyle.nextElementSibling.childNodes[0].innerText;
+//     console.log(hexCopy);
+
+//      return clipboardData.setData("Text", hexCopy); 
+//   })
+// }
 
 
 
 
-  })
-}
+
+
+
 

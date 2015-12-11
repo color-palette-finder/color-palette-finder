@@ -1,7 +1,7 @@
 var elements = document.getElementsByTagName('*');
 console.log('elements: ', elements);
 
-// ------------------- SCRAPE PAGE FOR ALL COLORS AND BACKGROUND COLORS ------------------------
+// ------------------- SCRAPE PAGE FOR ALL COLORS AND BACKGROUND COLORS ---------------------------------
 
 var colorObject = {};
 function colorHelper ( property ) {
@@ -43,11 +43,11 @@ for (var i = 0; i < 6; i++) {
 
 console.log('paletteArray:', paletteArray);
 
-//-------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
 
 
-//------------------------------ CONVERT RGB TO HEXIDECIMAL ---------------------------------
+//------------------------------ CONVERT RGB TO HEXIDECIMAL ----------------------------------------
 var hexArray = [];
 function toHex (c) {
 	var hex = c.toString(16);
@@ -66,7 +66,7 @@ for(var j = 0; j < paletteArray.length; j++) {
 }
 
 console.log('hexArray:', hexArray);
-//-------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
 
 
