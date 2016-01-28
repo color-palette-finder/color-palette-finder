@@ -1,8 +1,6 @@
 var elements = document.getElementsByTagName('*');
-console.log('elements: ', elements);
 
 // ------------------- SCRAPE PAGE FOR ALL COLORS AND BACKGROUND COLORS ---------------------------------
-
 var colorObject = {};
 function colorHelper ( property ) {
 	for(var i = 0; i < elements.length; i++) {
@@ -21,7 +19,6 @@ function colorHelper ( property ) {
 // get property values for elements with color and background color
 colorHelper('color');
 colorHelper('background-color');
-console.log('Color count:', colorObject);
 
 //FIND TOP 6 MOST COMMON COLORS ON PAGE
 var paletteArray = [];
@@ -40,9 +37,6 @@ function getObjectMax () {
 for (var i = 0; i < 6; i++) {
 	getObjectMax();
 }
-
-console.log('paletteArray:', paletteArray);
-
 //--------------------------------------------------------------------------------------------------
 
 
@@ -64,17 +58,11 @@ for(var j = 0; j < paletteArray.length; j++) {
 	var rgb = rgbCode.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
 		rgbToHex(parseInt(rgb[1]), parseInt(rgb[2]), parseInt(rgb[3]));
 }
-
-console.log('hexArray:', hexArray);
 //--------------------------------------------------------------------------------------------------
 
 
 
 //--------------------------- pass values to chrome pop up html window -----------------------------
-
-console.log('paletteArray:', paletteArray);
-
-
 chrome.runtime.sendMessage({
   from:    'content',
   subject: 'showPageAction'
@@ -94,9 +82,3 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
     response(domInfo);
   }
 });
-
-
-
-
-
-
