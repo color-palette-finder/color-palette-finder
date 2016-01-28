@@ -13,8 +13,6 @@ function setDOMInfo(info) {
   document.getElementById('color4').style.backgroundColor = info.hexArray[3];
   document.getElementById('color5').style.backgroundColor = info.hexArray[4];
   document.getElementById('color6').style.backgroundColor = info.hexArray[5];
-  console.log('paletteArray:', info.paletteArray);
-  console.log('hexArray:', info.hexArray);
 }
 
 
@@ -36,19 +34,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 new Clipboard('.colorBox');
 // copy to clipboard
-console.log(boxes);
-
-// for (var i = 0; i < boxes.length; i++){
-
-//   boxes[i].addEventListener('click', function (){
-
-//     var hexStyle = document.getElementById(this.id);
-//     var hexCopy = hexStyle.nextElementSibling.childNodes[0].innerText;
-//     console.log(hexCopy);
-
-//      return clipboardData.setData("Text", hexCopy); 
-//   })
-// }
 
 
 
